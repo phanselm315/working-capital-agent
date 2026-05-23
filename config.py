@@ -50,3 +50,36 @@ HIGH_RISK_PAST_DUE_DAYS = 61       # oldest past-due age that triggers escalatio
 # --- Remediation ---------------------------------------------------------
 WORKLIST_SIZE = 10  # accounts in this week's prioritized collector worklist
 FOLLOW_UP_DAYS = 5  # default days until the agent schedules a follow-up
+
+# --- Approval queue ------------------------------------------------------
+# Every email the agent drafts is staged for human review. Nothing is
+# marked sendable until a reviewer approves it -- this is the human in the
+# loop. "Edited" is a display tag, not a chosen state: it flags an approved
+# email whose subject or body the reviewer changed before approving.
+APPROVAL_STATES = ["Pending review", "Approved to send", "Held", "Rejected"]
+
+# --- Fund / treasury rollup ---------------------------------------------
+# The treasury view runs the diagnostic across every company in the fund
+# and rolls it into one value bridge: a working-capital improvement becomes
+# a recurring EBITDA lift, which -- valued at the EV/EBITDA multiple the
+# asset was bought at -- becomes enterprise value created, and a MOIC lift
+# on the fund's invested equity.
+FUND_NAME = "Hadrian Capital Partners, Fund III"
+PORTFOLIO_CSV = DATA_DIR / "portfolio.csv"
+PORTFOLIO_DIR = DATA_DIR / "portfolio"
+
+# EBITDA-lift model. A disciplined, always-on collections process recovers
+# aged and disputed receivables that the status-quo process loses to
+# write-off. Avoided bad-debt expense sits above the EBITDA line, so on an
+# annual run-rate basis it is a recurring EBITDA improvement. This factor is
+# the share of the agent-identified write-off-risk AR (disputed dollars plus
+# the 90+ day bucket) that the process converts from a permanent write-off
+# back into cash -- the net write-off avoided, not a gross write-off rate.
+# It is the single biggest assumption in the treasury view -- tune it here.
+BAD_DEBT_RECOVERY_UPLIFT = 0.35
+
+# MOIC math. True -> value the EBITDA lift at the entry EV/EBITDA multiple
+# (no multiple expansion; value creation is purely operational). This is the
+# conservative, defensible default. The one-time working-capital cash
+# release is valued separately, 1:1 against equity as it deleverages.
+HOLD_ENTRY_MULTIPLE = True

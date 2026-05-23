@@ -3,7 +3,8 @@
     python run_demo.py
 
 Runs the full agent pipeline and prints the diagnostic, the customer
-segmentation, and the prioritized collector worklist with drafted outreach.
+segmentation, and the prioritized collector worklist with drafted outreach --
+then rolls the diagnostic up across the whole fund into the treasury view.
 With no ANTHROPIC_API_KEY set, it runs in demo mode using cached Claude
 output -- no key and no network required.
 """
@@ -11,7 +12,7 @@ from __future__ import annotations
 
 import textwrap
 
-from src import agent
+from src import agent, treasury
 
 W = 78
 
@@ -94,8 +95,39 @@ def main():
     rule("=")
     total = sum(w["past_due_balance"] for w in result.worklist)
     print(f"  Worklist past-due exposure addressed this run: {usd(total)}")
+    print("  Every draft above is staged for human approval before send -- see the")
+    print("  Approval Queue tab in the dashboard (streamlit run app.py).")
     if result.demo_mode:
         print("  Running in demo mode. Add ANTHROPIC_API_KEY to .env for live drafting.")
+    rule("=")
+
+    # ----------------------------------------------------------------- Treasury
+    print()
+    rule("=")
+    print("  TREASURY -- FUND-LEVEL ROLLUP")
+    rule("=")
+    t = treasury.run_treasury()
+    f = t["fund"]
+    print(f"  {f['fund_name']}   ({f['company_count']} portfolio companies)")
+    print("  Working-capital improvement -> EBITDA lift -> (entry multiple) -> MOIC lift.")
+    print()
+    for r in t["companies"]:
+        c, b, dg = r.company, r.bridge, r.diagnostic
+        print(f"  {c['company_name']:<28} {c['entry_multiple']:>4.1f}x entry   "
+              f"DSO {dg['dso']:>3.0f}d   invested {usd(c['fund_invested_equity']):>12}")
+        print(f"      trapped cash {usd(b['cash_release']):>12}   "
+              f"EBITDA lift {usd(b['ebitda_lift']):>9} ({b['ebitda_lift_pct'] * 100:>2.0f}%)"
+              f"   MOIC lift +{b['moic_lift_total']:.2f}x")
+    print()
+    print(f"  FUND  trapped working capital : {usd(f['total_cash_release'])}")
+    print(f"  FUND  run-rate EBITDA lift    : {usd(f['total_ebitda_lift'])}  "
+          f"({f['total_ebitda_lift_pct'] * 100:.1f}% of fund EBITDA)")
+    print(f"  FUND  implied EV created      : {usd(f['total_ev_gain'])}  "
+          f"at {f['blended_entry_multiple']:.1f}x blended")
+    print(f"  FUND  value created to fund   : {usd(f['fund_value_total'])}")
+    print(f"  FUND  implied MOIC lift       : operating +{f['moic_lift_operating']:.2f}x   "
+          f"deleveraging +{f['moic_lift_cash']:.2f}x   total +{f['moic_lift_total']:.2f}x")
+    print(f"  (on {usd(f['invested_equity'])} invested equity; entry multiples held flat)")
     rule("=")
     print()
 

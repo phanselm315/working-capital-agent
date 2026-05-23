@@ -1,0 +1,41 @@
+customer_id,customer_name,industry,contact_name,contact_email,payment_terms,ttm_revenue,avg_days_to_pay,invoices_ttm,invoices_late_ttm
+C001,Cascade Industrial Group,Wholesale Trade,Greg Doyle,ap@cascadeindustrial.com,Net 45,2369000,57,26,3
+C002,Northwind Manufacturing,Freight & Logistics,Brenda Salas,ap@northwindmanufacturing.com,Net 45,1440000,48,40,6
+C003,Sterling Components Corp,Industrial Equipment,Mark Yoon,ap@sterlingcomponents.com,Net 60,2014000,60,21,3
+C004,Pacifica Materials Co,Industrial Equipment,Rhonda Frost,ap@pacificamaterialsco.com,Net 60,1522000,72,17,2
+C005,Granite Peak Industries,Packaging & Materials,Roy Pope,ap@granitepeakindustries.com,Net 45,2196000,44,18,2
+C006,Birch & Hollow Supply,Wholesale Trade,Susan Beck,ap@birchhollowsupply.com,Net 30,380000,47,27,12
+C007,Cedar Valley Distribution,Contract Manufacturing,Ron Webb,ap@cedarvalleydistribution.com,Net 45,672000,63,21,8
+C008,Riverstone Packaging,Fabricated Metals,Donna Boyd,ap@riverstonepackaging.com,Net 30,454000,41,31,14
+C009,Halcyon Tool Works,Freight & Logistics,Ed Doyle,ap@halcyontoolworks.com,Net 30,384000,45,9,4
+C010,Brightline Logistics,Packaging & Materials,Vicki Salas,ap@brightlinelogistics.com,Net 30,611000,46,28,12
+C011,Copperfield Equipment,Wholesale Trade,Lyle Yoon,ap@copperfieldequipment.com,Net 30,658000,46,13,5
+C012,Aspen Grove Products,Wholesale Trade,Linda Frost,ap@aspengroveproducts.com,Net 45,710000,54,34,13
+C013,Tidewater Fabrication,Packaging & Materials,Carl Pope,ap@tidewaterfabrication.com,Net 45,789000,54,32,14
+C014,Maple Ridge Hardware,Fabricated Metals,Lori Beck,ap@mapleridgehardware.com,Net 30,509000,39,22,8
+C015,Lakeshore Components,Packaging & Materials,Wayne Webb,ap@lakeshorecomponents.com,Net 45,343000,53,15,7
+C016,Vanguard Metalworks,Industrial Equipment,Marcia Boyd,ap@vanguardmetalworks.com,Net 30,548000,63,16,14
+C017,Ironclad Supply Co,Freight & Logistics,Stan Doyle,ap@ironcladsupplyco.com,Net 30,407000,81,13,11
+C018,Summit Crest Trading,Contract Manufacturing,Janet Salas,ap@summitcresttrading.com,Net 45,279000,105,8,7
+C019,Delta Bay Wholesale,Contract Manufacturing,Steve Yoon,ap@deltabaywholesale.com,Net 45,374000,76,9,9
+C020,Pinewood Industrial,Industrial Distribution,Cindy Frost,ap@pinewoodindustrial.com,Net 30,595000,93,11,9
+C021,Crossroads Distributors,Fabricated Metals,Dennis Pope,ap@crossroadsdistributors.com,Net 30,360000,90,14,11
+C022,Harbor Point Mfg,Industrial Distribution,Tina Beck,ap@harborpointmfg.com,Net 30,568000,79,28,27
+C023,Redwood Hollow Co,Industrial Distribution,Mike Webb,ap@redwoodhollowco.com,Net 30,491000,76,12,11
+C024,Stonebridge Parts,Building Products,Patty Boyd,ap@stonebridgeparts.com,Net 30,292000,67,10,9
+C025,Eastgate Materials,Industrial Equipment,Phil Doyle,ap@eastgatematerials.com,Net 30,355000,68,34,32
+C026,Clearwater Industrial,Freight & Logistics,Joan Salas,ap@clearwaterindustrial.com,Net 45,281000,91,6,6
+C027,Foundry Lane Supply,Industrial Equipment,Neil Yoon,ap@foundrylanesupply.com,Net 30,479000,94,11,10
+C028,Apex Holdings Group,Freight & Logistics,Debra Frost,ap@apexholdings.com,Net 30,827000,154,37,37
+C029,Beacon Street Trading,Fabricated Metals,Dave Pope,ap@beaconstreettrading.com,Net 30,854000,112,36,36
+C030,Lighthouse Industrial,Wholesale Trade,Diane Beck,ap@lighthouseindustrial.com,Net 30,782000,119,19,18
+C031,Keystone Freight Co,Contract Manufacturing,Gary Webb,ap@keystonefreightco.com,Net 30,696000,122,39,36
+C032,Old Mill Manufacturing,Industrial Equipment,Sheila Boyd,ap@oldmillmanufacturing.com,Net 30,784000,125,23,21
+C033,Junction Box LLC,Industrial Distribution,Bruce Doyle,ap@junctionbox.com,Net 15,118000,19,11,5
+C034,Two Rivers Workshop,Packaging & Materials,Connie Salas,ap@tworiversworkshop.com,Net 30,184000,37,14,7
+C035,Hilltop Supply,Packaging & Materials,Tom Yoon,ap@hilltopsupply.com,Net 15,110000,18,10,5
+C036,Anchor & Co Trading,Wholesale Trade,Nancy Frost,ap@anchorcotrading.com,Net 15,111000,16,9,4
+C037,Maple Street Mfg,Building Products,Frank Pope,ap@maplestreetmfg.com,Net 15,46000,36,13,6
+C038,Quail Run Hardware,Industrial Equipment,Paula Beck,ap@quailrunhardware.com,Net 15,75000,31,11,4
+C039,Bramble Hill Goods,Industrial Distribution,Glenn Webb,ap@bramblehillgoods.com,Net 30,50000,61,16,8
+C040,Fox Hollow Supply,Freight & Logistics,Karen Boyd,ap@foxhollowsupply.com,Net 30,75000,39,6,3

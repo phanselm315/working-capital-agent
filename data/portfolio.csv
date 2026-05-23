@@ -1,0 +1,8 @@
+company_id,company_name,sector,entry_date,entry_ebitda,entry_multiple,entry_net_debt,fund_ownership_pct,ar_aging_file,customers_file
+PC1,Meridian Industrial Supply,Industrial Distribution,2023-03-15,4600000,9.5,21000000,0.92,data/ar_aging.csv,data/customers.csv
+PC2,Crestline Packaging Group,Packaging & Materials,2022-09-01,8700000,10.5,46000000,1.00,data/portfolio/pc2_ar_aging.csv,data/portfolio/pc2_customers.csv
+PC3,Talon Fabricated Metals,Fabricated Metals,2024-02-20,3050000,8.0,12500000,0.88,data/portfolio/pc3_ar_aging.csv,data/portfolio/pc3_customers.csv
+PC4,Brightpath Logistics,Freight & Logistics,2023-07-10,5700000,11.0,30000000,0.95,data/portfolio/pc4_ar_aging.csv,data/portfolio/pc4_customers.csv
+PC5,Keystone Building Products,Building Products,2024-06-05,2800000,7.5,9000000,0.85,data/portfolio/pc5_ar_aging.csv,data/portfolio/pc5_customers.csv
+PC6,Vector Equipment Co,Industrial Equipment,2022-11-30,4200000,9.0,19500000,0.93,data/portfolio/pc6_ar_aging.csv,data/portfolio/pc6_customers.csv
+PC7,MidCon Plastics,Plastics Manufacturing,2024-11-15,20000000,8.5,102000000,0.90,data/portfolio/pc7_ar_aging.csv,data/portfolio/pc7_customers.csv
